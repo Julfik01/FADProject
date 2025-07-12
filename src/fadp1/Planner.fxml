@@ -1,104 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<!-- The fx:controller attribute points to the controller in the 'fadp1' package. -->
+<BorderPane styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fadp1.PlannerController">
+    <!-- Left Navigation Bar -->
+    <left>
+        <BorderPane prefHeight="1042.0" prefWidth="245.0">
+            <center>
+                <VBox alignment="TOP_CENTER" prefHeight="959.0" prefWidth="269.0" spacing="20.0" styleClass="left-nav-bar">
+                    <padding>
+                        <Insets top="20.0" />
+                    </padding>
+               <HBox prefHeight="69.0" prefWidth="218.0" styleClass="planner-logo">
+                  <children>
+                     <ImageView fx:id="appIconView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </HBox.margin>
+                        <image>
+                           <Image url="@../../../Users/laode/Downloads/food.png" />
+                        </image>
+                     </ImageView>
+                     <Label text="Meal Planner">
+                        <font>
+                           <Font name="System Bold" size="21.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <HBox accessibleRole="BUTTON" prefHeight="40.0" prefWidth="167.0" spacing="25.0" styleClass="planner-card">
+                  <children>
+                     <ImageView fx:id="plannerIconView" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="planner-logo">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <image>
+                           <Image url="@../../../Users/laode/Downloads/tasks%20(3).png" />
+                        </image>
+                     </ImageView>
+                     <Label styleClass="planner-text" text="Planner" textFill="#2e7d32">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <font>
+                           <Font name="System Bold" size="15.0" />
+                        </font>
+                     </Label>
+                  </children>
+                  <VBox.margin>
+                     <Insets left="25.0" right="25.0" />
+                  </VBox.margin>
+                  <padding>
+                     <Insets left="15.0" />
+                  </padding>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </HBox>
+               <HBox accessibleRole="BUTTON" layoutX="35.0" layoutY="104.0" prefHeight="21.0" prefWidth="193.0" spacing="25.0" styleClass="groceries-card">
+                  <children>
+                     <ImageView fx:id="groceriesIconView" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <image>
+                           <Image url="@../../../Users/laode/Downloads/grocery-basket%20(1).png" />
+                        </image>
+                     </ImageView>
+                     <Label text="Groceries">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <font>
+                           <Font name="System Bold" size="15.0" />
+                        </font>
+                     </Label>
+                  </children>
+                  <padding>
+                     <Insets left="15.0" />
+                  </padding>
+                  <VBox.margin>
+                     <Insets left="25.0" right="25.0" />
+                  </VBox.margin>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </HBox>
+               <HBox accessibleRole="BUTTON" layoutX="10.0" layoutY="203.0" prefHeight="1.0" prefWidth="167.0" spacing="25.0" styleClass="discover-card">
+                  <children>
+                     <ImageView fx:id="discoverIconView" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <image>
+                           <Image url="@../../../Users/laode/Downloads/discover%20(1).png" />
+                        </image>
+                     </ImageView>
+                     <Label text="Discover">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <font>
+                           <Font name="System Bold" size="15.0" />
+                        </font>
+                     </Label>
+                  </children>
+                  <padding>
+                     <Insets left="15.0" />
+                  </padding>
+                  <VBox.margin>
+                     <Insets left="25.0" right="25.0" />
+                  </VBox.margin>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </HBox>
+                </VBox>
+            </center>
+        </BorderPane>
+    </left>
 
-<BorderPane fx:id="rootPane" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fadp1.PlannerController">
-   <left>
-      <!-- Left Navigation Bar -->
-      <VBox fx:id="leftNavBar" alignment="TOP_CENTER" spacing="20.0" styleClass="left-nav-bar" BorderPane.alignment="CENTER">
-         <padding>
-            <Insets top="20.0" />
-         </padding>
-         <children>
-            <!-- Menu Button -->
-            <Button fx:id="menuButton" styleClass="icon-button-nav">
-               <graphic>
-                  <ImageView fx:id="menuIconView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
-               </graphic>
-               <!-- FIXED: The VBox.margin tag is now correctly placed inside the Button element it applies to. -->
-               <VBox.margin>
-                  <Insets bottom="20.0" />
-               </VBox.margin>
-            </Button>
-            <!-- Navigation Items -->
-            <VBox fx:id="plannerNav" alignment="CENTER" styleClass="nav-item-active">
-               <children>
-                  <ImageView fx:id="plannerIconView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label text="Planner" />
-               </children>
-            </VBox>
-            <VBox fx:id="groceriesNav" alignment="CENTER" styleClass="nav-item">
-               <children>
-                  <ImageView fx:id="groceriesIconView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label text="Groceries" />
-               </children>
-            </VBox>
-            <VBox fx:id="discoverNav" alignment="CENTER" styleClass="nav-item">
-               <children>
-                  <ImageView fx:id="discoverIconView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label text="Discover" />
-               </children>
-            </VBox>
-         </children>
-      </VBox>
-   </left>
-   <center>
-      <!-- Main Content Area -->
-      <BorderPane fx:id="mainContentPane" styleClass="main-content-pane" BorderPane.alignment="CENTER">
-         <top>
+    <!-- Main Content Area -->
+    <center>
+        <BorderPane styleClass="main-content-pane">
             <!-- Top Control Bar -->
-            <HBox fx:id="topControlBar" alignment="CENTER_LEFT" spacing="15.0" styleClass="top-bar" BorderPane.alignment="CENTER">
-               <children>
-                  <ToggleButton fx:id="dayToggle" mnemonicParsing="false" selected="true" text="Day">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="viewToggleGroup" />
-                     </toggleGroup>
-                  </ToggleButton>
-                  <ToggleButton fx:id="weekToggle" mnemonicParsing="false" text="Week" toggleGroup="$viewToggleGroup" />
-                  <Button fx:id="prevDayButton" styleClass="icon-button-transparent" text="&lt;" />
-                  <Button fx:id="nextDayButton" styleClass="icon-button-transparent" text="&gt;" />
-                  <Label fx:id="dateLabel" styleClass="date-label" text="Today" />
-                  <Region HBox.hgrow="ALWAYS" />
-                  <Button fx:id="editDayButton" mnemonicParsing="false" styleClass="primary-button" text="Edit Day">
-                     <graphic>
-                        <ImageView fx:id="editIconView" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
-                     </graphic>
-                  </Button>
-                  <Button fx:id="moreOptionsButton" styleClass="icon-button-transparent" text="..." />
-               </children>
+            <top>
+                <HBox alignment="CENTER_LEFT" prefHeight="127.0" prefWidth="1301.0" spacing="15.0" styleClass="top-bar" BorderPane.alignment="CENTER">
+                    <Label styleClass="date-label" text="Today">
+                  <HBox.margin>
+                     <Insets left="30.0" />
+                  </HBox.margin></Label>
+                    <Button styleClass="icon-button-transparent" text="&lt;" />
+               <Label text="July 12, 2025" textFill="#676262">
+                  <font>
+                     <Font size="17.0" />
+                  </font>
+               </Label>
+                    <Button styleClass="icon-button-transparent" text="&gt;">
+                  <font>
+                     <Font size="39.0" />
+                  </font></Button>
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Button styleClass="primary-button" text="Edit Day">
+                        <graphic>
+                            <ImageView fx:id="editIconView" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                        </graphic>
+                  <HBox.margin>
+                     <Insets right="30.0" />
+                  </HBox.margin>
+                    </Button>
                <padding>
                   <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
                </padding>
-            </HBox>
-         </top>
-         <center>
-            <!-- Central Content -->
-            <VBox fx:id="centerVBox" alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
-               <children>
-                  <ImageView fx:id="mainImageView" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label fx:id="promptLabel" styleClass="prompt-label" text="What are we eating today?" />
-                  <Button fx:id="generateButton" mnemonicParsing="false" styleClass="primary-button" text="Generate">
-                     <graphic>
-                        <ImageView fx:id="generateIconView" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
-                     </graphic>
-                  </Button>
-                  <Button fx:id="copyPreviousButton" mnemonicParsing="false" styleClass="secondary-button" text="Copy Previous" />
-                  <Button fx:id="planManuallyButton" mnemonicParsing="false" styleClass="secondary-button" text="Plan Manually" />
-                  <HBox fx:id="actionButtonsBox" alignment="CENTER" spacing="15.0" />
-               </children>
-            </VBox>
-         </center>
-      </BorderPane>
-   </center>
+                </HBox>
+            </top>
+
+            <!-- Center Content with Split Pane -->
+            <center>
+                <SplitPane styleClass="split-pane">
+                    <!-- Left Side: Meals List -->
+                    <ScrollPane fitToWidth="true" prefHeight="957.0" prefWidth="886.0" styleClass="scroll-pane">
+                        <content>
+                            <VBox prefHeight="747.0" prefWidth="843.0" spacing="20.0" styleClass="meals-vbox">
+                                <padding>
+                                    <Insets bottom="20.0" left="40.0" right="20.0" top="10.0" />
+                                </padding>
+                                <!-- Meals Header -->
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Region HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+                            </VBox>
+                        </content>
+                    </ScrollPane>
+                </SplitPane>
+            </center>
+        </BorderPane>
+    </center>
 </BorderPane>

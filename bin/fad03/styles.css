@@ -16,7 +16,7 @@
 }
 
 .planner-card {
-    -fx-background-color: #e3f0ff; /* Changed to white */
+    -fx-background-color: #F5F5F5; /* Changed to white */
     -fx-padding: 10;
     -fx-background-radius: 10;
     -fx-alignment: center-left;

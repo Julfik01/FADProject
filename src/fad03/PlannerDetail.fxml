@@ -31,7 +31,7 @@
                   <children>
                      <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-                           <Image url="@../../../Users/laode/Downloads/intermittent-fasting.png" />
+                           <Image url="@../../../Users/laode/Downloads/food.png" />
                         </image>
                         <HBox.margin>
                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -54,10 +54,10 @@
                            <Insets />
                         </HBox.margin>
                         <image>
-                           <Image url="@../../../Users/laode/Downloads/tasks%20(2).png" />
+                           <Image url="@../../../Users/laode/Downloads/tasks%20(3).png" />
                         </image>
                      </ImageView>
-                     <Label styleClass="planner-text" text="Planner" textFill="#636cd4">
+                     <Label styleClass="planner-text" text="Planner" textFill="#2e7d32">
                         <HBox.margin>
                            <Insets />
                         </HBox.margin>

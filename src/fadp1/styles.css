@@ -1,133 +1,123 @@
 /* --- Root and General Styles --- */
 .root {
-    -fx-background-color: #2D2D2D;
-    -fx-font-family: "System"; /* Using system default font */
+    -fx-background-color: #FFFFFF; /* White background for a clean look */
+    -fx-font-family: "System";
     -fx-font-size: 14px;
 }
 
 /* --- Left Navigation Bar --- */
 .left-nav-bar {
-    -fx-background-color: #2D2D2D;
+    -fx-background-color: #FDFDFB; /* Light gray for a subtle contrast */
     -fx-pref-width: 100px;
     -fx-padding: 20 0 20 0;
     -fx-border-width: 0 1 0 0;
-    -fx-border-color: #404040;
-}
-
-.nav-item, .nav-item-active {
-    -fx-cursor: hand;
-    -fx-padding: 10 5 10 5;
-    -fx-pref-width: 80px;
+    -fx-border-color: #E0E0E0; /* Light border color */
     -fx-border-radius: 10;
+}
+
+/* Consolidated navigation card style */
+.nav-card {
+    -fx-background-color: #F5F5F5; /* Consistent background for nav cards */
+    -fx-padding: 10;
     -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
 }
 
-.nav-item .label, .nav-item-active .label {
-    -fx-text-fill: #A0A0A0;
-    -fx-font-size: 13px;
-    -fx-padding: 5 0 0 0;
+.nav-card:hover {
+    -fx-background-color: #E0E0E0; /* Hover effect for interactivity */
 }
 
-.nav-item:hover {
-    -fx-background-color: #383838;
+.planner-logo {
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
 }
 
-.nav-item-active {
-    -fx-background-color: #383838;
+.planner-text {
+    -fx-fill: #2e7d32; /* Specific color for planner text */
 }
 
-.nav-item-active .label {
-    -fx-text-fill: #FF7B54; /* Active color */
+.planner-card {
+    -fx-background-color: #F5F5F5;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #F5F5F5;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+.groceries-card {
+    -fx-background-color: #F5F5F5;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #F5F5F5;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+.discover-card {
+    -fx-background-color: #F5F5F5;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #F5F5F5;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
 }
 
 /* --- Main Content Pane --- */
 .main-content-pane {
-    -fx-background-color: #2D2D2D;
+    -fx-background-color: #FFFFFF;
     -fx-padding: 0;
 }
 
 /* --- Top Bar --- */
 .top-bar {
     -fx-alignment: center-left;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #E0E0E0;
 }
 
 .date-label {
-    -fx-text-fill: white;
+    -fx-text-fill: #333333;
     -fx-font-size: 24px;
     -fx-font-weight: bold;
-}
-
-/* --- Central Content --- */
-.prompt-label {
-    -fx-text-fill: #E0E0E0;
-    -fx-font-size: 22px;
-    -fx-font-weight: normal;
 }
 
 /* --- Buttons --- */
 .button {
     -fx-cursor: hand;
-    -fx-text-fill: white;
+    -fx-text-fill: #333333;
     -fx-background-radius: 20;
     -fx-padding: 10 20 10 20;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
+    -fx-background-color: #E0E0E0;
 }
-
-.primary-button {
-    -fx-background-color: #FF7B54;
-}
-
-.primary-button:hover {
-    -fx-background-color: #FF6347;
-}
-
-.secondary-button {
-    -fx-background-color: #4A4A4A;
-}
-
-.secondary-button:hover {
-    -fx-background-color: #5A5A5A;
-}
-
-.icon-button-nav {
-    -fx-background-color: #4A4A4A;
-    -fx-padding: 12;
-    -fx-background-radius: 12;
-}
-
-.icon-button-nav:hover {
-    -fx-background-color: #5A5A5A;
-}
-
 
 .icon-button-transparent {
     -fx-background-color: transparent;
-    -fx-font-size: 20px;
-    -fx-text-fill: #A0A0A0;
+    -fx-font-size: 23px;
+    -fx-text-fill: #505050;
     -fx-padding: 5 10 5 10;
+    -fx-background-radius: 8;
 }
 
 .icon-button-transparent:hover {
-    -fx-background-color: #383838;
+    -fx-background-color: #EAEAEA;
 }
 
-/* --- Toggle Buttons --- */
-.toggle-button {
-    -fx-background-color: #4A4A4A;
-    -fx-text-fill: white;
-    -fx-background-radius: 20;
-    -fx-padding: 8 18 8 18;
-    -fx-font-size: 14px;
+/* --- Split Pane --- */
+.split-pane {
+    -fx-background-color: #FFFFFF;
 }
 
-.toggle-button:selected {
-    -fx-background-color: #6A6A6A;
-    -fx-font-weight: bold;
-}
-
-.toggle-button:focused {
-    -fx-border-color: #FF7B54;
-    -fx-border-width: 1px;
-    -fx-border-radius: 20;
+.split-pane-divider {
+    -fx-background-color: #DCDCDC;
+    -fx-padding: 0 1 0 1;
 }

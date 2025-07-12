@@ -1,6 +1,9 @@
-package fadp1; // <-- This line is added to match your project structure.
+package fadp1;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.chart.PieChart;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -8,41 +11,59 @@ import java.io.InputStream;
 
 public class PlannerController {
 
-    // These fields will be automatically linked to the ImageViews in the FXML file.
+    // FXML bindings for ImageViews
     @FXML private ImageView menuIconView;
     @FXML private ImageView plannerIconView;
     @FXML private ImageView groceriesIconView;
     @FXML private ImageView discoverIconView;
+    @FXML private ImageView appIconView; // Carrot icon
     @FXML private ImageView editIconView;
-    @FXML private ImageView mainImageView;
-    @FXML private ImageView generateIconView;
+    @FXML private ImageView refreshIconView;
+    @FXML private ImageView historyIconView;
+    @FXML private ImageView settingsIconView;
+    @FXML private ImageView breakfastIconView;
+    @FXML private ImageView lunchIconView;
+    @FXML private ImageView dinnerIconView;
+    @FXML private ImageView meal1ImageView;
+    @FXML private ImageView meal2ImageView;
+    @FXML private ImageView meal3ImageView;
+    @FXML private ImageView meal4ImageView;
+    @FXML private ImageView warningIconView;
 
-    /**
-     * This method is automatically called by the FXMLLoader after the FXML file has been loaded.
-     * We use it to programmatically set the images, which solves the path issues.
-     */
     @FXML
     public void initialize() {
-        // Load all images using a helper method.
-        // This approach is robust and works both in IDEs and when packaged into a JAR.
-        loadImage(menuIconView, "/icons/menu.png");
-        loadImage(plannerIconView, "/icons/planner.png");
-        loadImage(groceriesIconView, "/icons/groceries.png");
-        loadImage(discoverIconView, "/icons/discover.png");
-        loadImage(editIconView, "/icons/edit.png");
-        loadImage(mainImageView, "/images/placeholder-art.png");
-        loadImage(generateIconView, "/icons/generate.png");
+        // Load all images programmatically
+        loadAllImages();
     }
 
-    /**
-     * A helper method to load an image and set it to an ImageView.
-     * It includes error handling in case an image is not found.
-     * @param imageView The ImageView to set the image on.
-     * @param path The path to the image within the resources folder.
-     */
+    private void loadAllImages() {
+        // All icon and image paths are relative to the 'fadp1' package folder.
+        // This ensures that the component is self-contained and that resources
+        // are loaded correctly from within the package structure.
+        loadImage(menuIconView, "icons/menu.png");
+        loadImage(plannerIconView, "icons/planner.png");
+        loadImage(groceriesIconView, "icons/groceries.png");
+        loadImage(discoverIconView, "icons/discover.png");
+        loadImage(appIconView, "icons/carrot.png");
+        loadImage(editIconView, "icons/edit.png");
+        loadImage(refreshIconView, "icons/refresh.png");
+        loadImage(historyIconView, "icons/history.png");
+        loadImage(settingsIconView, "icons/settings.png");
+        loadImage(breakfastIconView, "icons/breakfast.png");
+        loadImage(lunchIconView, "icons/lunch.png");
+        loadImage(dinnerIconView, "icons/dinner.png");
+        loadImage(warningIconView, "icons/warning.png");
+
+        // Placeholder images for meals
+        loadImage(meal1ImageView, "images/meal1.jpeg");
+        loadImage(meal2ImageView, "images/meal2.jpeg");
+        loadImage(meal3ImageView, "images/meal3.jpeg");
+        loadImage(meal4ImageView, "images/meal4.jpeg");
+    }
+
     private void loadImage(ImageView imageView, String path) {
+        if (imageView == null) return;
         try {
-            // Use getResourceAsStream which is the standard way to access packaged resources.
             InputStream stream = getClass().getResourceAsStream(path);
             if (stream == null) {
                 System.err.println("Cannot load image resource: " + path);

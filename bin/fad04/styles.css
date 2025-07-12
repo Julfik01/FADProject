@@ -101,7 +101,7 @@
 /* --- Top Bar --- */
 .top-bar {
     -fx-alignment: center-left;
-    -fx-border-width: 0 0 1 0;
+    -fx-border-width: 0 0 0 0;
     -fx-border-color: #FDFDFB; /* Changed to a light border color */
 }
 
