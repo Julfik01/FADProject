@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- The fx:controller attribute points to the controller in the 'fadp1' package. -->
+
+<BorderPane fx:id="rootPane" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fadp1.PlannerController">
+   <left>
+      <!-- Left Navigation Bar -->
+      <VBox fx:id="leftNavBar" alignment="TOP_CENTER" spacing="20.0" styleClass="left-nav-bar" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <children>
+            <!-- Menu Button -->
+            <Button fx:id="menuButton" styleClass="icon-button-nav">
+               <graphic>
+                  <ImageView fx:id="menuIconView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <!-- FIXED: The VBox.margin tag is now correctly placed inside the Button element it applies to. -->
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <!-- Navigation Items -->
+            <VBox fx:id="plannerNav" alignment="CENTER" styleClass="nav-item-active">
+               <children>
+                  <ImageView fx:id="plannerIconView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label text="Planner" />
+               </children>
+            </VBox>
+            <VBox fx:id="groceriesNav" alignment="CENTER" styleClass="nav-item">
+               <children>
+                  <ImageView fx:id="groceriesIconView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label text="Groceries" />
+               </children>
+            </VBox>
+            <VBox fx:id="discoverNav" alignment="CENTER" styleClass="nav-item">
+               <children>
+                  <ImageView fx:id="discoverIconView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label text="Discover" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <!-- Main Content Area -->
+      <BorderPane fx:id="mainContentPane" styleClass="main-content-pane" BorderPane.alignment="CENTER">
+         <top>
+            <!-- Top Control Bar -->
+            <HBox fx:id="topControlBar" alignment="CENTER_LEFT" spacing="15.0" styleClass="top-bar" BorderPane.alignment="CENTER">
+               <children>
+                  <ToggleButton fx:id="dayToggle" mnemonicParsing="false" selected="true" text="Day">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="viewToggleGroup" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="weekToggle" mnemonicParsing="false" text="Week" toggleGroup="$viewToggleGroup" />
+                  <Button fx:id="prevDayButton" styleClass="icon-button-transparent" text="&lt;" />
+                  <Button fx:id="nextDayButton" styleClass="icon-button-transparent" text="&gt;" />
+                  <Label fx:id="dateLabel" styleClass="date-label" text="Today" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="editDayButton" mnemonicParsing="false" styleClass="primary-button" text="Edit Day">
+                     <graphic>
+                        <ImageView fx:id="editIconView" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="moreOptionsButton" styleClass="icon-button-transparent" text="..." />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+               </padding>
+            </HBox>
+         </top>
+         <center>
+            <!-- Central Content -->
+            <VBox fx:id="centerVBox" alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="mainImageView" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="promptLabel" styleClass="prompt-label" text="What are we eating today?" />
+                  <Button fx:id="generateButton" mnemonicParsing="false" styleClass="primary-button" text="Generate">
+                     <graphic>
+                        <ImageView fx:id="generateIconView" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="copyPreviousButton" mnemonicParsing="false" styleClass="secondary-button" text="Copy Previous" />
+                  <Button fx:id="planManuallyButton" mnemonicParsing="false" styleClass="secondary-button" text="Plan Manually" />
+                  <HBox fx:id="actionButtonsBox" alignment="CENTER" spacing="15.0" />
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

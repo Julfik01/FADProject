@@ -1,0 +1,169 @@
+/* General styling for the root pane */
+.root {
+    -fx-font-family: "System";
+    -fx-background-color: #F4F6F8;
+}
+
+/* Header styling */
+.header {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 10 20 10 20;
+    -fx-spacing: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 2);
+}
+
+.header-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #555;
+    -fx-font-size: 14px;
+    -fx-padding: 8 15;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.menu-button:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.search-box {
+    -fx-spacing: 0;
+}
+
+.search-field {
+    -fx-prompt-text-fill: #999;
+    -fx-background-color: #F4F6F8;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-padding: 5 10;
+    -fx-font-size: 13px;
+    -fx-background-radius: 20 0 0 20;
+    -fx-border-radius: 20 0 0 20;
+}
+
+.search-button {
+    -fx-background-color: #F4F6F8;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1 1 1 0;
+    -fx-padding: 5 12;
+    -fx-background-radius: 0 20 20 0;
+    -fx-border-radius: 0 20 20 0;
+}
+
+/* Sidebar styling */
+.sidebar {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 20 0 20 0;
+    -fx-spacing: 5;
+    -fx-pref-width: 240px;
+    -fx-border-color: transparent #E0E0E0 transparent transparent;
+    -fx-border-width: 1;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-font-size: 15px;
+    -fx-text-fill: #34495e;
+    -fx-padding: 12 25;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #ecf0f1;
+}
+
+.sidebar-button:focused {
+    -fx-background-color: #e8f0fe;
+    -fx-text-fill: #1967d2;
+    -fx-border-color: #1967d2 transparent transparent transparent;
+    -fx-border-width: 0 0 0 4;
+}
+
+/* Main content area styling */
+.content-area {
+    -fx-padding: 30;
+    -fx-spacing: 25;
+}
+
+.content-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 0 0 10 0;
+}
+
+/* Card styling */
+.card {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 20;
+    -fx-spacing: 8;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 15, 0, 0, 3);
+}
+
+.card-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.card-value {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.card-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #95a5a6;
+}
+
+/* Chart styling */
+.chart-container {
+    -fx-padding: 20;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 15, 0, 0, 3);
+}
+
+.chart-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+    -fx-padding: 0 0 15 0;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-vertical-grid-lines, .chart-horizontal-grid-lines {
+    -fx-stroke: #EAECEE;
+}
+
+.axis {
+    -fx-tick-label-fill: #7f8c8d;
+    -fx-font-size: 12px;
+}
+
+.default-color0.chart-series-line { -fx-stroke: #3498db; }
+.default-color1.chart-series-line { -fx-stroke: #9b59b6; }
+.default-color0.chart-line-symbol { -fx-background-color: #3498db, white; }
+.default-color1.chart-line-symbol { -fx-background-color: #9b59b6, white; }
+
+/* Status bar styling */
+.status-bar {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 8 20;
+    -fx-border-color: #E0E0E0 transparent transparent transparent;
+    -fx-border-width: 1;
+    -fx-font-size: 12px;
+    -fx-text-fill: #7f8c8d;
+}

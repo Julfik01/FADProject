@@ -1,0 +1,320 @@
+/* --- Root and General Styles --- */
+.root {
+    -fx-background-color: #FFFFFF; /* Changed to white */
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+}
+
+/* --- Left Navigation Bar --- */
+.left-nav-bar {
+    -fx-background-color: #FDFDFB; /* Changed to light gray */
+    -fx-pref-width: 100px;
+    -fx-padding: 20 0 20 0;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: #FDFDFB; /* Changed to a light border color */
+    -fx-border-radius: 10;
+}
+
+.planner-card {
+    -fx-background-color: #e3f0ff; /* Changed to white */
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #F5F5F5;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+.planner-logo {
+    -fx-background-color: #0077ff; /* Changed to white */
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: #0077ff; /* Changed to white */
+}
+
+.planner-text {
+    -fx-color: #667ffb; /* Changed to white */
+    
+}
+.grocories-card {
+    -fx-background-color: #F5F5F5; /* Changed to white */
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #F5F5F5;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+.discover-card {
+    -fx-background-color: #F5F5F5; /* Changed to white */
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #F5F5F5;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+.planner-logo {
+    -fx-background-color: #ffffff; /* Changed to white */
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+.nav-item, .nav-item-active {
+    -fx-cursor: hand;
+    -fx-padding: 10 5 10 5;
+    -fx-pref-width: 80px;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.nav-item .label, .nav-item-active .label {
+    -fx-text-fill: #505050; /* Changed to dark gray */
+    -fx-font-size: 13px;
+    -fx-padding: 5 0 0 0;
+}
+
+.nav-item:hover {
+    -fx-background-color: #E0E0E0; /* Changed to a light hover color */
+}
+
+.nav-item-active {
+    -fx-background-color: #E0E0E0; /* Changed to a light active color */
+}
+
+.nav-item-active .label {
+    -fx-text-fill: #FF7B54; /* Active color remains the same */
+}
+
+/* --- Main Content Pane --- */
+.main-content-pane {
+    -fx-background-color: #FFFFFF; /* Changed to white */
+    -fx-padding: 0;
+}
+
+/* --- Top Bar --- */
+.top-bar {
+    -fx-alignment: center-left;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #FDFDFB; /* Changed to a light border color */
+}
+
+.date-label {
+    -fx-text-fill: #333333; /* Changed to dark gray */
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* --- Buttons --- */
+.button {
+    -fx-cursor: hand;
+    -fx-text-fill: #333333; /* Default text color to dark */
+    -fx-background-radius: 20;
+    -fx-padding: 10 20 10 20;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-color: #E0E0E0; /* Default background to light gray */
+}
+
+.primary-button {
+    -fx-background-color: #F5F5F5;
+    -fx-text-fill: rgb(0, 0, 0); /* Keep primary button text white */
+}
+
+.primary-button:hover {
+    -fx-background-color: #F5F5F5;
+}
+
+.secondary-button {
+    -fx-background-color: #E0E0E0;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #D0D0D0;
+}
+
+.icon-button-nav {
+    -fx-background-color: #E0E0E0;
+    -fx-padding: 12;
+    -fx-background-radius: 12;
+}
+
+.icon-button-nav:hover {
+    -fx-background-color: #D0D0D0;
+}
+
+.icon-button-transparent {
+    -fx-background-color: transparent;
+    -fx-font-size: 23px;
+    -fx-text-fill: #000000; /* Changed icon color to gray */
+    -fx-padding: 5 10 5 10;
+    -fx-background-radius: 8;
+}
+
+.icon-button-transparent:hover {
+    -fx-background-color: #EAEAEA; /* Changed to a light hover color */
+}
+
+/* --- Toggle Buttons --- */
+.toggle-button {
+    -fx-background-color: #EAEAEA;
+    -fx-text-fill: #333333; /* Changed text to dark gray */
+    -fx-background-radius: 20;
+    -fx-padding: 8 18 8 18;
+    -fx-font-size: 14px;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #B0B0B0;
+    -fx-font-weight: bold;
+}
+
+/* --- Split Pane --- */
+.split-pane {
+    -fx-background-color: #FFFFFF; /* Changed to white */
+}
+.split-pane-divider {
+    -fx-background-color: #DCDCDC; /* Changed to light gray */
+    -fx-padding: 0 1 0 1;
+}
+
+/* --- Scroll Pane --- */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* --- Meals Section --- */
+.meals-vbox {
+    -fx-background-color: #F5F5F5; /* Changed to white */
+}
+
+.section-header {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333; /* Changed to dark gray */
+}
+
+.calorie-sub-header {
+    -fx-font-size: 14px;
+    -fx-text-fill: #808080; /* Changed to a medium gray */
+}
+
+.meal-section {
+    -fx-background-color: #FDFDFB; /* Changed to very light gray */
+    -fx-padding: 15;
+    -fx-background-radius: 10;
+}
+
+.meal-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000; /* Changed to dark gray */
+    -fx-font-style: "Roboto", medium; /* Changed to a more modern font */
+    /*-fx-font-family: "Roboto", sans-serif;*/
+}
+
+.meal-calories {
+    -fx-font-size: 14px;
+     -fx-font-weight: light;
+    -fx-text-fill: #000000; /* Changed to medium gray */
+}
+
+.meal-card {
+    -fx-background-color: #F5F5F5; /* Changed to white */
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #F5F5F5;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+.meal-image {
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.meal-name {
+    -fx-font-size: 15px;
+    -fx-text-fill: #333333; /* Changed to dark gray */
+    -fx-wrap-text: true;
+    -fx-font-style: Poppins;
+    -fx-font-weight: bold;
+}
+
+.meal-servings {
+    -fx-font-size: 13px;
+    -fx-text-fill: #808080; /* Changed to medium gray */
+    -fx-font-style: Lato;
+    -fx-font-weight: regular;
+}
+
+/* --- Nutrition Pane --- */
+.nutrition-pane {
+    -fx-background-color: #F5F5F5; /* Changed to white */
+}
+
+.nutrition-pane2 {
+    -fx-background-color: #FDFDFB; /* Changed to white */
+    -fx-padding: 15;
+    -fx-background-radius: 10;
+}
+
+/* --- Pie Chart --- */
+.pie-chart .chart-pie {
+    -fx-border-width: 0;
+}
+.pie-chart .chart-legend {
+    -fx-background-color: transparent;
+}
+.pie-chart .chart-legend .label {
+    -fx-text-fill: #333333; /* Changed to dark gray */
+}
+.chart-pie-label-line {
+    -fx-stroke: #A0A0A0; /* Changed to medium gray */
+    -fx-stroke-width: 1px;
+}
+.chart-pie-label {
+    -fx-fill: #333333; /* Changed to dark gray */
+    -fx-font-size: 12px;
+}
+/* Pie chart data colors remain the same for contrast */
+.data0.chart-pie { -fx-pie-color: #0082D4; } /* Fat - Blue */
+.data1.chart-pie { -fx-pie-color: #FFC000; } /* Carbs - Yellow */
+.data2.chart-pie { -fx-pie-color: #A030A0; } /* Protein - Purple */
+
+/* --- Notification Box --- */
+.notification-box {
+    -fx-background-color: #FFF8E1; /* Changed to light yellow */
+    -fx-background-radius: 8;
+    -fx-padding: 10 15 10 15;
+}
+.notification-box .label {
+    -fx-text-fill: #FFA000; /* Changed to a darker warning yellow */
+}
+
+/* --- Nutrition Grid --- */
+.nutrition-grid {
+    -fx-text-fill: #333333;
+}
+.nutrition-grid .label {
+    -fx-text-fill: #333333; /* Changed to dark gray */
+}
+.grid-header {
+    -fx-font-weight: bold;
+    -fx-text-fill: #808080; /* Changed to medium gray */
+}
+/* Dot colors remain the same to match pie chart */
+.fat-dot { -fx-text-fill: #0082D4; }
+.carbs-dot { -fx-text-fill: #FFC000; }
+.protein-dot { -fx-text-fill: #A030A0; }
