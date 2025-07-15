@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="planner2.Planner2Controller">
+    <!-- Left Navigation Bar -->
+    <left>
+        <BorderPane prefHeight="1042.0" prefWidth="245.0">
+            <center>
+                <VBox alignment="TOP_CENTER" prefHeight="959.0" prefWidth="269.0" spacing="20.0" styleClass="left-nav-bar">
+                    <padding>
+                        <Insets top="20.0" />
+                    </padding>
+               <HBox prefHeight="69.0" prefWidth="218.0" styleClass="planner-logo">
+                  <children>
+                     <ImageView fx:id="appIconView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </HBox.margin>
+                        <image>
+                           <Image url="@../../../Users/laode/Downloads/food.png" />
+                        </image>
+                     </ImageView>
+                     <Label text="Meal Planner">
+                        <font>
+                           <Font name="System Bold" size="21.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <HBox accessibleRole="BUTTON" prefHeight="40.0" prefWidth="167.0" spacing="25.0" styleClass="planner-card">
+                  <children>
+                     <ImageView fx:id="plannerIconView" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="planner-logo">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <image>
+                           <Image url="@../../../Users/laode/Downloads/tasks%20(3).png" />
+                        </image>
+                     </ImageView>
+                     <Label styleClass="planner-text" text="Planner" textFill="#2e7d32">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <font>
+                           <Font name="System Bold" size="15.0" />
+                        </font>
+                     </Label>
+                  </children>
+                  <VBox.margin>
+                     <Insets left="25.0" right="25.0" />
+                  </VBox.margin>
+                  <padding>
+                     <Insets left="15.0" />
+                  </padding>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </HBox>
+               <HBox accessibleRole="BUTTON" layoutX="35.0" layoutY="104.0" prefHeight="21.0" prefWidth="193.0" spacing="25.0" styleClass="groceries-card">
+                  <children>
+                     <ImageView fx:id="groceriesIconView" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <image>
+                           <Image url="@../../../Users/laode/Downloads/grocery-basket%20(1).png" />
+                        </image>
+                     </ImageView>
+                     <Label text="Groceries">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <font>
+                           <Font name="System Bold" size="15.0" />
+                        </font>
+                     </Label>
+                  </children>
+                  <padding>
+                     <Insets left="15.0" />
+                  </padding>
+                  <VBox.margin>
+                     <Insets left="25.0" right="25.0" />
+                  </VBox.margin>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </HBox>
+               <HBox accessibleRole="BUTTON" layoutX="10.0" layoutY="203.0" prefHeight="1.0" prefWidth="167.0" spacing="25.0" styleClass="discover-card">
+                  <children>
+                     <ImageView fx:id="discoverIconView" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <image>
+                           <Image url="@../../../Users/laode/Downloads/discover%20(1).png" />
+                        </image>
+                     </ImageView>
+                     <Label text="Discover">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <font>
+                           <Font name="System Bold" size="15.0" />
+                        </font>
+                     </Label>
+                  </children>
+                  <padding>
+                     <Insets left="15.0" />
+                  </padding>
+                  <VBox.margin>
+                     <Insets left="25.0" right="25.0" />
+                  </VBox.margin>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </HBox>
+                </VBox>
+            </center>
+        </BorderPane>
+    </left>
+
+    <!-- Main Content Area -->
+    <center>
+        <BorderPane styleClass="main-content-pane">
+            <!-- Top Control Bar -->
+            <top>
+                <HBox alignment="CENTER_LEFT" prefHeight="127.0" prefWidth="1301.0" spacing="15.0" styleClass="top-bar" BorderPane.alignment="CENTER">
+                    <Label styleClass="date-label" text="Today">
+                  <HBox.margin>
+                     <Insets left="30.0" />
+                  </HBox.margin></Label>
+                    <Button styleClass="icon-button-transparent" text="&lt;" />
+               <Label text="July 12, 2025" textFill="#676262">
+                  <font>
+                     <Font size="17.0" />
+                  </font>
+               </Label>
+                    <Button styleClass="icon-button-transparent" text="&gt;">
+                  <font>
+                     <Font size="39.0" />
+                  </font></Button>
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Button styleClass="primary-button" text="Edit Day">
+                        <graphic>
+                            <ImageView fx:id="editIconView" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../Users/laode/Downloads/edit%20(1).png" />
+                        </image></ImageView>
+                        </graphic>
+                  <HBox.margin>
+                     <Insets right="30.0" />
+                  </HBox.margin>
+                    </Button>
+               <padding>
+                  <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+               </padding>
+                </HBox>
+            </top>
+
+            <!-- Center Content with Split Pane -->
+            <center>
+                <SplitPane styleClass="split-pane">
+                    <!-- Left Side: Meals List -->
+                    <ScrollPane fitToWidth="true" prefHeight="584.0" prefWidth="1299.0" styleClass="scroll-pane">
+                  <content>
+                     <VBox prefHeight="594.0" prefWidth="1299.0">
+                        <children>
+                           <Region prefHeight="19.0" prefWidth="1299.0" />
+                           <ImageView fitHeight="366.0" fitWidth="312.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../Users/laode/Downloads/an-emoji-that-want-to-fill-a-meal-planner.png" />
+                              </image>
+                              <VBox.margin>
+                                 <Insets left="330.0" />
+                              </VBox.margin>
+                           </ImageView>
+                           <Label styleClass="the-text" text="What's for breakfast/lunch/dinner?">
+                              <VBox.margin>
+                                 <Insets bottom="30.0" left="270.0" />
+                              </VBox.margin>
+                           </Label>
+                           <HBox prefHeight="108.0" prefWidth="1299.0" spacing="50.0">
+                              <children>
+                                 <VBox spacing="15.0" styleClass="creat-section">
+                                    <children>
+                                       <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="create-icon">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/add%20(3).png" />
+                                          </image>
+                                          <VBox.margin>
+                                             <Insets left="7.0" />
+                                          </VBox.margin>
+                                       </ImageView>
+                                       <Label prefHeight="27.0" prefWidth="55.0" styleClass="create-text" text="Create" textFill="WHITE" />
+                                    </children>
+                                    <cursor>
+                                       <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <HBox.margin>
+                                       <Insets left="210.0" />
+                                    </HBox.margin>
+                                 </VBox>
+                                 <VBox spacing="15.0" styleClass="planmanually-section">
+                                    <children>
+                                       <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="planmanually-icon">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/project-management%20(1).png" />
+                                          </image>
+                                          <VBox.margin>
+                                             <Insets left="35.0" right="35.0" />
+                                          </VBox.margin>
+                                       </ImageView>
+                                       <Label prefHeight="28.0" prefWidth="121.0" styleClass="planmanually-text" text="Plan Manually" textFill="WHITE" />
+                                    </children>
+                                    <cursor>
+                                       <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                 </VBox>
+                                 <VBox spacing="15.0" styleClass="copyprevious-section">
+                                    <children>
+                                       <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/files%20(1).png" />
+                                          </image>
+                                          <VBox.margin>
+                                             <Insets left="30.0" right="30.0" />
+                                          </VBox.margin>
+                                       </ImageView>
+                                       <Label styleClass="copyprevious-text" text="Copy Previous" textFill="WHITE" />
+                                    </children>
+                                    <cursor>
+                                       <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                 </VBox>
+                              </children>
+                              <padding>
+                                 <Insets left="50.0" right="50.0" />
+                              </padding>
+                              <VBox.margin>
+                                 <Insets />
+                              </VBox.margin>
+                           </HBox>
+                        </children>
+                     </VBox>
+                  </content>
+                    </ScrollPane>
+                </SplitPane>
+            </center>
+        </BorderPane>
+    </center>
+</BorderPane>

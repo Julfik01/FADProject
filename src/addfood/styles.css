@@ -1,0 +1,136 @@
+/* --- Root and General Styles --- */
+.root {
+    -fx-background-color: #FFFFFF; /* White background for a clean look */
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+}
+
+/* --- Left Navigation Bar --- */
+.left-nav-bar {
+    -fx-background-color: #FDFDFB; /* Light gray for a subtle contrast */
+    -fx-pref-width: 100px;
+    -fx-padding: 20 0 20 0;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: #E0E0E0; /* Light border color */
+    -fx-border-radius: 10;
+}
+
+/* Consolidated navigation card style */
+.nav-card {
+    -fx-background-color: #F5F5F5; /* Consistent background for nav cards */
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+.nav-card:hover {
+    -fx-background-color: #E0E0E0; /* Hover effect for interactivity */
+}
+
+.planner-logo {
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+}
+
+.planner-text {
+    -fx-fill: #2e7d32; /* Specific color for planner text */
+}
+
+.planner-card {
+    -fx-background-color: #F5F5F5;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #F5F5F5;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+.groceries-card {
+    -fx-background-color: #F5F5F5;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #F5F5F5;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+.discover-card {
+    -fx-background-color: #F5F5F5;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #F5F5F5;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+/* --- Main Content Pane --- */
+.main-content-pane {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 0;
+}
+
+/* --- Top Bar --- */
+.top-bar {
+    -fx-alignment: center-left;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #E0E0E0;
+}
+
+.date-label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* --- Buttons --- */
+.button {
+    -fx-cursor: hand;
+    -fx-text-fill: #333333;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20 10 20;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-color: #E0E0E0;
+}
+
+.icon-button-transparent {
+    -fx-background-color: transparent;
+    -fx-font-size: 23px;
+    -fx-text-fill: #505050;
+    -fx-padding: 5 10 5 10;
+    -fx-background-radius: 8;
+}
+
+.icon-button-transparent:hover {
+    -fx-background-color: #EAEAEA;
+}
+
+/* --- Split Pane --- */
+.split-pane {
+    -fx-background-color: #FFFFFF;
+}
+
+.split-pane-divider {
+    -fx-background-color: #DCDCDC;
+    -fx-padding: 0 1 0 1;
+}
+
+.food-name {
+    -fx-font-size: 17px;
+    -fx-font-weight: light;
+    -fx-text-fill: #000000; /* Changed to dark gray */
+    -fx-font-style: "Roboto", medium; /* Changed to a more modern font */
+    -fx-cursor: hand;
+}
+
+.food-images {
+    -fx-cursor: hand;
+}
+

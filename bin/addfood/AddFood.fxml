@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addfood.AddFoodController">
+
+    <!-- Main Content Area -->
+    <center>
+        <BorderPane styleClass="main-content-pane">
+            <!-- Top Control Bar -->
+            <top>
+                <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="top-bar" BorderPane.alignment="CENTER">
+                    <Region HBox.hgrow="ALWAYS" />
+               <TextField text="Search" HBox.hgrow="ALWAYS" />
+               <Region layoutX="50.0" layoutY="30.0" HBox.hgrow="ALWAYS" />
+               <padding>
+                  <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+               </padding>
+                </HBox>
+            </top>
+
+            <!-- Center Content with Split Pane -->
+            <center>
+                <SplitPane styleClass="split-pane">
+                    <!-- Left Side: Meals List -->
+                    <ScrollPane fitToWidth="true" prefHeight="584.0" prefWidth="1299.0" styleClass="scroll-pane">
+                  <content>
+                     <VBox prefHeight="919.0" prefWidth="1299.0">
+                        <children>
+                           <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                              <children>
+                                 <VBox prefHeight="189.0" prefWidth="0.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="388.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/grilled-chicken.png" />
+                                          </image>
+                                          <VBox.margin>
+                                             <Insets />
+                                          </VBox.margin>
+                                          <cursor>
+                                             <Cursor fx:constant="HAND" />
+                                          </cursor>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Grilled Chicken">
+                                          <font>
+                                             <Font name="System Bold" size="18.0" />
+                                          </font>
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin>
+                                          <cursor>
+                                             <Cursor fx:constant="HAND" />
+                                          </cursor>
+                                       </Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/chicken-satay.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Chicken Satay">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/soto-ayam-lamongan.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Soto Ayam Lamongan">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/opor-ayam-.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Opor Ayam ">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/steamed-fish-in-banana-leaf%20(1).png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Pepes Ikan">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                              <VBox.margin>
+                                 <Insets />
+                              </VBox.margin>
+                              <padding>
+                                 <Insets bottom="30.0" left="35.0" />
+                              </padding>
+                           </HBox>
+                           <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                              <children>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="388.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/gudeg-komplit-.png" />
+                                          </image>
+                                          <VBox.margin>
+                                             <Insets />
+                                          </VBox.margin>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Gudeg Komplit ">
+                                          <padding>
+                                             <Insets top="10.0" />
+                                          </padding></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/rendang-sapi.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Rendang Sapi">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/bakso-urat.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Bakso Urat">
+                                          <padding>
+                                             <Insets top="10.0" />
+                                          </padding></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/rawon.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Rawon">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/sop-buntut.png" />
+                                          </image>
+                                          <VBox.margin>
+                                             <Insets />
+                                          </VBox.margin>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Sop Buntut">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                              <padding>
+                                 <Insets bottom="30.0" left="35.0" />
+                              </padding>
+                           </HBox>
+                           <HBox layoutX="10.0" layoutY="434.0" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                              <children>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="388.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/semur-daging-sapi-.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Semur Daging Sapi ">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/gulai-ikan-kakap.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Gulai Ikan Kakap">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/cumi-goreng-tepung.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Cumi Goreng Tepung">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/tongseng-kambing.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Tongseng Kambing">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/tempe---tahu-bacem.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Tempe &amp; Tahu Bacem">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                              <padding>
+                                 <Insets bottom="30.0" left="35.0" />
+                              </padding>
+                           </HBox>
+                           <HBox layoutX="10.0" layoutY="406.0" prefHeight="100.0" prefWidth="200.0">
+                              <children>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="388.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/chicken-porridge.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Chicken Porridge">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/lontong-sayur-with-extra-protein.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Lontong Sayur">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/gado-gado-with-extra-tahu--tempe--and-egg.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Gado-Gado">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/grilled-fish-with-red-rice.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Grilled Fish with Red Rice">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="food-images">
+                                          <image>
+                                             <Image url="@../../../Users/laode/Downloads/chicken-soup-with-added-protein.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label styleClass="food-name" text="Chicken Soup ">
+                                          <VBox.margin>
+                                             <Insets top="10.0" />
+                                          </VBox.margin></Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                              <padding>
+                                 <Insets left="35.0" />
+                              </padding>
+                           </HBox>
+                           <Region prefHeight="77.0" prefWidth="1299.0" />
+                        </children>
+                     </VBox>
+                  </content>
+                    </ScrollPane>
+                </SplitPane>
+            </center>
+        </BorderPane>
+    </center>
+</BorderPane>
